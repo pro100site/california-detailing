@@ -1,0 +1,198 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>California — детейлинг-центр в Алматы: плёнка, полировка, химчистка</title><meta name="description" content="Детейлинг-центр California на Садовникова, 99 в Алматы: оклейка защитной плёнкой, полировка и кузовной ремонт, химчистка салона, тонировка, шумоизоляция и мойка. 4,7 в 2ГИС, ежедневно 09:00-20:00. Цены и запись в WhatsApp."><meta name="theme-color" content="#08090A"><link rel="canonical" href="https://pro100site.github.io/california-detailing/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%2308090A%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial%27 font-size=%2718%27 font-weight=%27700%27 fill=%27%23D9B489%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E"><meta property="og:type" content="website"><meta property="og:title" content="California — детейлинг-центр в Алматы: плёнка, полировка, химчистка"><meta property="og:description" content="Детейлинг-центр California на Садовникова, 99 в Алматы: оклейка защитной плёнкой, полировка и кузовной ремонт, химчистка салона, тонировка, шумоизоляция и мойка. 4,7 в 2ГИС, ежедневно 09:00-20:00. Цены и запись в WhatsApp."><meta property="og:url" content="https://pro100site.github.io/california-detailing/"><meta property="og:site_name" content="DETAILING CENTRE California"><meta property="og:image" content="https://pro100site.github.io/california-detailing/img/og.jpg"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><style>
+:root{
+  --bg:#08090A; --bg2:#0E1012; --ink:#F4F1EC; --mut:#9A9DA3; --dim:#6E7178;
+  --line:rgba(244,241,236,.13); --line2:rgba(244,241,236,.28); --sand:#D9B489; --sand2:#F0D3AC;
+  --disp:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --text:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.55;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.mono{font-variant-numeric:tabular-nums}
+
+/* прогресс + шапка */
+#pg{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--sand),var(--sand2));z-index:90}
+.hd{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:7px 18px;background:linear-gradient(180deg,rgba(8,9,10,.92),rgba(8,9,10,0));
+  backdrop-filter:blur(6px);transition:background .3s}
+.hd.on{background:rgba(8,9,10,.94);border-bottom:1px solid var(--line)}
+.wm{display:flex;align-items:center;gap:8px;min-height:44px}
+.wm b{font-family:var(--disp);font-weight:800;font-size:13px;letter-spacing:.34em;text-transform:uppercase}
+.wm i{font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.hd a.tel{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.06em;border:1px solid var(--line2);
+  border-radius:100px;padding:9px 15px;min-height:40px;transition:border-color .25s,color .25s}
+.hd a.tel:hover{border-color:var(--sand);color:var(--sand2)}
+.hd a.tel svg{width:14px;height:14px}
+
+/* титул */
+.hero{position:relative;min-height:640px;height:94svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(8,9,10,.72) 0%,rgba(8,9,10,.18) 34%,rgba(8,9,10,.86) 78%,var(--bg) 100%)}
+.hero .wrap{padding-bottom:clamp(28px,6vw,64px);position:relative;width:100%}
+.kick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--sand2);margin-bottom:18px}
+.kick span{display:inline-flex;align-items:center;gap:10px}
+.kick .dot{width:5px;height:5px;border-radius:50%;background:var(--sand);display:inline-block}
+.hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(2.9rem,12.4vw,8.2rem);line-height:.88;
+  letter-spacing:-.035em;text-transform:uppercase;margin:0 0 18px}
+.hero h1 em{font-style:normal;color:var(--sand)}
+.lead{max-width:34ch;color:#DDD9D2;font-size:clamp(15px,4.2vw,19px);line-height:1.5}
+.hero-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 22px;
+  border-radius:100px;font-size:14px;font-weight:600;letter-spacing:.02em;border:1px solid transparent;
+  transition:transform .18s,background .25s,border-color .25s,color .25s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-a{background:var(--sand);color:#15100A}
+.btn-a:hover{background:var(--sand2)}
+.btn-b{border-color:var(--line2);color:var(--ink)}
+.btn-b:hover{border-color:var(--sand);color:var(--sand2)}
+.rate{display:inline-flex;align-items:baseline;gap:8px;font-size:13px;color:var(--mut)}
+.rate b{font-family:var(--disp);font-size:20px;color:var(--ink);font-weight:700}
+
+/* спецификация */
+.spec{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spec div{padding:16px 4px;border-bottom:1px solid var(--line)}
+.spec div:nth-child(odd){padding-right:14px}
+.spec div:nth-last-child(-n+2){border-bottom:0}
+.spec dt{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:5px}
+.spec dd{margin:0;font-size:14px;line-height:1.35}
+.spec dd b{font-family:var(--disp);font-weight:700}
+
+/* главы */
+.chp{padding:clamp(54px,11vw,104px) 0 0}
+.ch{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.ch-n{font-family:var(--disp);font-weight:700;font-size:12px;letter-spacing:.18em;color:var(--sand);padding-top:6px}
+.ch h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.55rem,6.6vw,2.9rem);line-height:1.02;
+  letter-spacing:-.025em;text-transform:uppercase}
+.ch p{grid-column:2;color:var(--mut);font-size:14.5px;line-height:1.5;max-width:52ch}
+
+/* направления */
+.dirs{margin-top:6px}
+.dir{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:18px 0;border-bottom:1px solid var(--line);position:relative}
+.dir-n{font-family:var(--disp);font-weight:700;font-size:11px;letter-spacing:.16em;color:var(--dim);padding-top:5px}
+.dir h3{font-family:var(--disp);font-weight:700;font-size:clamp(1.05rem,4.6vw,1.4rem);line-height:1.15}
+.dir p{grid-column:2;color:var(--mut);font-size:13.5px;line-height:1.5;margin-top:5px;max-width:56ch}
+.dir .p{grid-column:2;display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--sand2);margin-top:8px;white-space:nowrap}
+.dir .p svg{width:13px;height:13px}
+.dir:hover h3{color:var(--sand2)}
+
+/* прайс */
+.pr{display:grid;gap:26px;margin-top:26px}
+.pr h3{font-family:var(--disp);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);
+  padding-bottom:9px;border-bottom:1px solid var(--line2);margin-bottom:2px}
+.pr .row{display:flex;align-items:baseline;gap:8px;padding:9px 0;border-bottom:1px dotted rgba(244,241,236,.13);font-size:14px}
+.pr .row span:first-child{color:#DEDAD3}
+.pr .row i{flex:1;height:1px}
+.pr .row b{font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.note{margin-top:18px;font-size:12px;line-height:1.6;color:var(--dim);border-left:1px solid var(--line2);padding-left:12px}
+
+/* кадры */
+.gal{display:grid;gap:12px;margin-top:24px}
+.gal figure{margin:0;position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/3;background:var(--bg2)}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.gal figure:hover img{transform:scale(1.03)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 11px;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:#E9E5DE;background:linear-gradient(180deg,rgba(8,9,10,0),rgba(8,9,10,.82))}
+.wide{margin:12px 0 0;position:relative;overflow:hidden;border-radius:4px}
+.wide img{width:100%;height:auto}
+.wide figcaption{position:absolute;left:14px;bottom:12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E9E5DE;
+  text-shadow:0 1px 12px rgba(0,0,0,.85)}
+
+/* оценка */
+.voice{margin-top:22px;display:grid;gap:20px;align-items:center}
+.score{display:flex;align-items:baseline;gap:12px;font-family:var(--disp)}
+.score b{font-size:clamp(3.4rem,15vw,5.4rem);font-weight:800;letter-spacing:-.04em;line-height:.9}
+.score span{font-family:var(--text);font-size:13px;color:var(--mut);max-width:12ch;line-height:1.4}
+.voice p{color:var(--mut);font-size:14.5px;max-width:46ch;line-height:1.6}
+.voice a.more{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13.5px;color:var(--sand2);
+  border-bottom:1px solid rgba(217,180,137,.5)}
+
+/* приезд */
+.visit{margin-top:26px;display:grid;gap:26px}
+.vlist{display:grid;gap:0}
+.vlist div{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+.vlist dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);padding-top:3px}
+.vlist dd{margin:0;line-height:1.45}
+.vlist a{display:inline-block;padding:11px 0;border-bottom:1px solid rgba(217,180,137,.45)}
+#map{height:300px;border-radius:4px;border:1px solid var(--line);filter:grayscale(.35) contrast(1.03);background:var(--bg2)}
+.mapnote{margin-top:10px;font-size:11.5px;color:var(--dim)}
+.mapnote a{border-bottom:1px solid var(--line2)}
+
+/* финал + подвал + липкая */
+.final{margin-top:clamp(56px,10vw,96px);padding:clamp(34px,8vw,64px) 0;border-top:1px solid var(--line);
+  background:radial-gradient(120% 90% at 80% 0%,rgba(217,180,137,.13),transparent 60%)}
+.final h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.7rem,7.2vw,3.2rem);line-height:1;letter-spacing:-.03em;
+  text-transform:uppercase;max-width:22ch;margin-bottom:22px}
+.ft{border-top:1px solid var(--line);padding:26px 0 92px;font-size:12px;color:var(--dim);line-height:1.8}
+.ft .fnt{color:var(--sand2);border-bottom:1px solid rgba(217,180,137,.45)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  background:rgba(8,9,10,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+.sticky.on{transform:translateY(0)}
+.sticky .btn{min-height:46px;font-size:13.5px}
+.sticky .btn-b{background:rgba(244,241,236,.06)}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+html:not(.js) .reveal{opacity:1;transform:none}
+
+/* адаптив: снизу вверх, база 390 */
+@media (min-width:560px){
+  .hero{min-height:700px}
+  .gal{grid-template-columns:1fr 1fr}
+  .pr{grid-template-columns:1fr 1fr}
+  .voice{grid-template-columns:auto 1fr;gap:32px}
+  .final h2{max-width:26ch}
+}
+@media (min-width:900px){
+  .wrap{padding:0 32px}
+  .hd{padding:10px 32px}
+  .wm b{font-size:14px}
+  .hero{height:96svh}
+  .spec{grid-template-columns:repeat(4,1fr)}
+  .spec div{border-bottom:0;border-right:1px solid var(--line);padding:22px 18px}
+  .spec div:first-child{padding-left:0}
+  .spec div:last-child{border-right:0}
+  .ch{grid-template-columns:64px 1fr;gap:6px 22px}
+  .dir{grid-template-columns:64px 1fr auto;align-items:baseline;padding:24px 0}
+  .dir p{grid-column:2}
+  .dir .p{grid-column:3;grid-row:1;margin-top:0}
+  .pr{grid-template-columns:repeat(3,1fr);gap:34px}
+  .gal{gap:16px}
+  .visit{grid-template-columns:1fr 1.15fr;gap:34px;align-items:start}
+  #map{height:420px}
+  .sticky{display:none}
+  .ft{padding-bottom:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .gal figure:hover img{transform:none}
+  .btn:hover{transform:none}
+}
+.hours-h{font-family:var(--disp);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin:26px 0 4px}.i{display:inline-block;vertical-align:-2px}</style></head><body><div id="pg"></div><header class="hd" id="hd"><a class="wm" href="#top"><b>California</b><i>детейлинг-центр</i></a><a class="tel" href="tel:+77758882888"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.3 4.6 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.6 20 4 13.4 4 5c0-.6.4-1 1-1h2.8c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg><span>+7 775 888 28 88</span></a></header><section class="hero" id="top"><img src="img/hero.jpg" alt="Детейлинг-центр California, Алматы" width="1280" height="720" fetchpriority="high"><div class="wrap"><div class="kick"><span>Алматы</span><span class="dot"></span><span>Садовникова, 99</span><span class="dot"></span><span>ежедневно 09:00—20:00</span></div><h1>Calif<em>o</em>rnia</h1><p class="lead">Плёнка, полировка, химчистка и мойка — один комплекс на Садовникова, 99. От передней брони до полного круга.</p><div class="hero-row"><a class="btn btn-a" href="https://wa.me/77758882888" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4.2-1.2l-.5-.3-2.6.7.7-2.5-.3-.5A8 8 0 0 1 12 4zm-3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2s.8 2.2 1 2.4c.2.2 1.6 2.5 3.9 3.4 1.9.8 2.3.6 2.7.6.4 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3l-1.4-.7c-.2-.1-.4-.1-.5.1l-.6.8c-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.7-1.1-.6-.6-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5l-.6-1.4c-.1-.3-.3-.3-.5-.3z"/></svg><span>Записаться в WhatsApp</span></a><a class="btn btn-b" href="tel:+77758882888"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.3 4.6 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.6 20 4 13.4 4 5c0-.6.4-1 1-1h2.8c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg><span>Позвонить</span></a><span class="rate"><b>4,7</b> · 206 оценок в 2ГИС</span></div></div></section><div class="wrap"><dl class="spec"><div><dt>Рейтинг 2ГИС</dt><dd><b>4,7</b> из 5</dd></div><div><dt>Оценки и отзывы</dt><dd>206 оценок, 126 отзыва</dd></div><div><dt>Режим</dt><dd>Ежедневно 09:00—20:00</dd></div><div><dt>Адрес</dt><dd>Садовникова, 99<br>Ауэзовский район</dd></div></dl></div><section class="chp"><div class="wrap"><div class="ch reveal"><span class="ch-n">Глава 01</span><h2>Пять направлений</h2><p>Автокомплекс делает всё, за чем обычно едут в три разных места: плёнка и защита, кузов и полировка, салон, тонировка и шумоизоляция. Ниже — что именно и по какой цене.</p></div><div class="dirs reveal"><div class="dir"><span class="dir-n">01</span><h3>Оклейка плёнкой и защита</h3><p>Полиуретановая броня и винил: от передней части до полного круга, фары и лобовое, керамика.</p><span class="p">от 280 000 ₸<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div><div class="dir"><span class="dir-n">02</span><h3>Кузовной ремонт и полировка</h3><p>Полировка кузова и фар, удаление царапин, покраска, восстановление геометрии, PDR.</p><span class="p">от 10 000 ₸<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div><div class="dir"><span class="dir-n">03</span><h3>Химчистка и ателье</h3><p>Химчистка салона с разбором и без, перетяжка, пошив авточехлов, защита уязвимых мест.</p><span class="p">от 40 000 ₸<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div><div class="dir"><span class="dir-n">04</span><h3>Тонировка и шумоизоляция</h3><p>Тонирование стёкол, шумоизоляция, снятие старой плёнки, чёрнение резины и пластика.</p><span class="p">от 25 000 ₸<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div><div class="dir"><span class="dir-n">05</span><h3>Мойка, аксессуары, оптика</h3><p>Детейлинг-мойка, EVA и 3D коврики, авточехлы, детские кресла, регистраторы, оптика.</p><span class="p">от 5 000 ₸<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></div></div></section><section class="chp"><div class="wrap"><div class="ch reveal"><span class="ch-n">Глава 02</span><h2>Прайс</h2><p>Цены из карточки 2ГИС, обновлены 28 февраля 2026. Перед началом работ сумму подтверждаем после осмотра: она зависит от состояния кузова и объёма разборки.</p></div><div class="pr reveal"><div><h3>Плёнки и защита</h3><div class="row"><span>Оклейка кузова в круг</span><i></i><b>от 700 000 ₸</b></div><div class="row"><span>Оклейка передней части (броня)</span><i></i><b>от 280 000 ₸</b></div><div class="row"><span>Оклейка фар</span><i></i><b>от 25 000 ₸</b></div><div class="row"><span>Лобовое стекло, антиблик</span><i></i><b>от 90 000 ₸</b></div><div class="row"><span>Салон, уязвимые части</span><i></i><b>от 40 000 ₸</b></div><div class="row"><span>4 ручки + 4 кантика</span><i></i><b>от 20 000 ₸</b></div><div class="row"><span>Цветная плёнка (винил)</span><i></i><b>от 950 000 ₸</b></div><div class="row"><span>Керамическое покрытие</span><i></i><b>от 30 000 ₸</b></div></div><div><h3>Кузов и полировка</h3><div class="row"><span>Полировка кузова</span><i></i><b>от 70 000 ₸</b></div><div class="row"><span>Локальная полировка</span><i></i><b>от 15 000 ₸</b></div><div class="row"><span>Полировка фар</span><i></i><b>от 10 000 ₸</b></div><div class="row"><span>Удаление царапин</span><i></i><b>20 000 ₸</b></div><div class="row"><span>Керамика на кузов</span><i></i><b>30 000 ₸</b></div><div class="row"><span>PDR, вмятины без покраски</span><i></i><b>по осмотру</b></div></div><div><h3>Салон, мойка, допы</h3><div class="row"><span>Химчистка без разбора</span><i></i><b>от 50 000 ₸</b></div><div class="row"><span>Химчистка с разбором</span><i></i><b>от 70 000 ₸</b></div><div class="row"><span>Защита салона плёнкой</span><i></i><b>от 40 000 ₸</b></div><div class="row"><span>Перетяжка салона</span><i></i><b>от 40 000 ₸</b></div><div class="row"><span>Обычная мойка, кузов + салон</span><i></i><b>от 6 000 ₸</b></div><div class="row"><span>Детейлинг-мойка</span><i></i><b>от 15 000 ₸</b></div><div class="row"><span>Мойка днища</span><i></i><b>от 10 000 ₸</b></div><div class="row"><span>Мойка двигателя</span><i></i><b>от 5 000 ₸</b></div><div class="row"><span>Тонировка стёкол</span><i></i><b>от 25 000 ₸</b></div><div class="row"><span>Снятие старой плёнки</span><i></i><b>от 40 000 ₸</b></div><div class="row"><span>Шумоизоляция</span><i></i><b>30 000 ₸</b></div></div></div><p class="note">PDR и работы по выхлопу считаются по осмотру автомобиля. Мойка двигателя — за мотор ответственности не несём, так и написано в прайсе.</p></div></section><section class="chp"><div class="wrap"><div class="ch reveal"><span class="ch-n">Глава 03</span><h2>Кадры</h2><p>Броня на кузове и полировка — две работы, которые в прайсе стоят дороже всего и которые видно на машине сразу.</p></div><div class="gal reveal"><figure><img src="img/film.jpg" alt="Оклейка кузова защитной плёнкой" width="800" height="600"><figcaption>Плёнка: передняя броня и полный круг</figcaption></figure><figure><img src="img/polish.jpg" alt="Полировка кузова до зеркального блеска" width="800" height="600"><figcaption>Полировка кузова и фар</figcaption></figure></div><figure class="wide reveal"><img src="img/interior.jpg" alt="Салон после химчистки" width="800" height="600"><figcaption>Химчистка салона — с разбором и без</figcaption></figure></div></section><section class="chp"><div class="wrap"><div class="ch reveal"><span class="ch-n">Глава 04</span><h2>Оценка</h2><p>Не наша реклама, а цифры из карточки: их видит каждый, кто ищет детейлинг в Ауэзовском районе.</p></div><div class="voice reveal"><div class="score"><b>4,7</b><span>в 2ГИС<br>206 оценок</span></div><div><p>В карточке 2ГИС 206 оценок и 126 отзыва; 67 фотографий работ выложены там же. Читать чужие отзывы на сайте не пересказываем — открывайте первоисточник и смотрите свежие.</p><a class="more" href="https://2gis.kz/almaty/firm/70000001102010141/tab/reviews" target="_blank" rel="noopener">Отзывы в 2ГИС<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div></div></div></section><section class="chp"><div class="wrap"><div class="ch reveal"><span class="ch-n">Глава 05</span><h2>Приехать</h2><p>Садовникова, 99 — Ауэзовский район. Машину принимают ежедневно с 9 до 20; на крупные работы записывайтесь заранее, чтобы освободили бокс.</p></div><div class="visit reveal"><div><dl class="vlist"><div><dt>Адрес</dt><dd>Улица Садовникова, 99, Алматы</dd></div><div><dt>Телефон</dt><dd><a href="tel:+77758882888">+7 775 888 28 88</a></dd></div><div><dt>WhatsApp</dt><dd><a href="https://wa.me/77758882888" target="_blank" rel="noopener">Написать в WhatsApp</a></dd></div><div><dt>Instagram</dt><dd><a href="https://instagram.com/california_d.c" target="_blank" rel="noopener">california_d.c</a></dd></div></dl><h3 class="hours-h">Часы работы</h3><dl class="vlist"><div><dt>Пн</dt><dd>09:00-20:00</dd></div><div><dt>Вт</dt><dd>09:00-20:00</dd></div><div><dt>Ср</dt><dd>09:00-20:00</dd></div><div><dt>Чт</dt><dd>09:00-20:00</dd></div><div><dt>Пт</dt><dd>09:00-20:00</dd></div><div><dt>Сб</dt><dd>09:00-20:00</dd></div><div><dt>Вс</dt><dd>09:00-20:00</dd></div></dl></div><div><div id="map"></div><p class="mapnote">Карта OpenStreetMap. Точка — <a href="https://2gis.kz/almaty/firm/70000001102010141" target="_blank" rel="noopener">карточка в 2ГИС</a>.</p></div></div></div></section><section class="final"><div class="wrap"><h2>Приезжайте — посмотрим, что можно сделать</h2><div class="hero-row"><a class="btn btn-a" href="https://wa.me/77758882888" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4.2-1.2l-.5-.3-2.6.7.7-2.5-.3-.5A8 8 0 0 1 12 4zm-3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2s.8 2.2 1 2.4c.2.2 1.6 2.5 3.9 3.4 1.9.8 2.3.6 2.7.6.4 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3l-1.4-.7c-.2-.1-.4-.1-.5.1l-.6.8c-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.7-1.1-.6-.6-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5l-.6-1.4c-.1-.3-.3-.3-.5-.3z"/></svg><span>Написать в WhatsApp</span></a><a class="btn btn-b" href="tel:+77758882888"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.3 4.6 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.6 20 4 13.4 4 5c0-.6.4-1 1-1h2.8c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg><span>+7 775 888 28 88</span></a></div></div></section><footer class="ft"><div class="wrap"><div>DETAILING CENTRE California · Улица Садовникова, 99, Алматы · +7 775 888 28 88</div><div>Данные сверены по карточке 2ГИС 26.11.2026. Рейтинг и оценки — 2ГИС.</div><div><a class="fnt" href="https://fntai.org" target="_blank" rel="noopener">Сайт сделан бесплатно · FNT AI</a></div></div></footer><div class="sticky" id="sticky"><a class="btn btn-a" href="https://wa.me/77758882888" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4.2-1.2l-.5-.3-2.6.7.7-2.5-.3-.5A8 8 0 0 1 12 4zm-3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2s.8 2.2 1 2.4c.2.2 1.6 2.5 3.9 3.4 1.9.8 2.3.6 2.7.6.4 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3l-1.4-.7c-.2-.1-.4-.1-.5.1l-.6.8c-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.7-1.1-.6-.6-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5l-.6-1.4c-.1-.3-.3-.3-.5-.3z"/></svg><span>WhatsApp</span></a><a class="btn btn-b" href="tel:+77758882888"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.3 4.6 6 6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.6 20 4 13.4 4 5c0-.6.4-1 1-1h2.8c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg><span>Позвонить</span></a></div><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
+document.documentElement.classList.add("js");
+var hd=document.getElementById("hd"),pg=document.getElementById("pg"),st=document.getElementById("sticky");
+function onScroll(){var y=window.scrollY||document.documentElement.scrollTop;
+var h=document.documentElement.scrollHeight-window.innerHeight;
+pg.style.width=(h>0?Math.min(100,y/h*100):0)+"%";
+hd.classList.toggle("on",y>40);
+st.classList.toggle("on",y>window.innerHeight*0.6);}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+var items=document.querySelectorAll(".reveal");
+if(window.IntersectionObserver){var io=new IntersectionObserver(function(es){
+es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});
+},{rootMargin:"0px 0px -8% 0px"});
+items.forEach(function(el){io.observe(el);});}else{items.forEach(function(el){el.classList.add("in");});}
+setTimeout(function(){items.forEach(function(el){el.classList.add("in");});},2500);
+if(window.L){var lat=43.22997,lon=76.87414;var map=L.map("map",{scrollWheelZoom:false}).setView([lat,lon],16);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"(c) OpenStreetMap"}).addTo(map);
+L.marker([lat,lon]).addTo(map).bindPopup("California, Садовникова 99");
+setTimeout(function(){map.invalidateSize();},600);}
+</script></body></html>
